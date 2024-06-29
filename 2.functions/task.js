@@ -1,8 +1,9 @@
 function getArrayParams(...arr) {
-	/*var min = Infinity;
+	var min = Infinity;
 	var max = -Infinity;
 	var sum = 0;
-	for (var i = 0; i < arr.length; i++) {
+	var avg = 0;
+	*/for (var i = 0; i < arr.length; i++) {
 	  sum += i;
 	   if (arr[i] > max) {
 	     max = arr[i];
@@ -12,10 +13,10 @@ function getArrayParams(...arr) {
 	   };
 	const avg = sum / [...arr].length;
 	*/
-	var max = Math.max(...arr);
-	var min = Math.min(...arr);
-	var sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
-	var avg = sum / [...arr].length;
+	 max = Math.max(...arr);
+	 min = Math.min(...arr);
+	 sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
+	avg = sum / [...arr].length;
 	avg = avg.toFixed(2);
 	avg = Number(avg);
 	return {
