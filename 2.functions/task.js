@@ -3,16 +3,15 @@ function getArrayParams(...arr) {
 	var max = -Infinity;
 	var sum = 0;
 	var avg = 0;
-	*/for (var i = 0; i < arr.length; i++) {
-	  sum += i;
-	   if (arr[i] > max) {
-	     max = arr[i];
-	   };
-	   else if (arr[i] < min) {
-	    min = arr[i];
-	   };
-	const avg = sum / [...arr].length;
-	*/
+	//for (var i = 0; i < arr.length; i++) {
+	//   sum += i;
+	//    if (arr[i] > max) {
+	//      max = arr[i];
+	//    };
+	//    else if (arr[i] < min) {
+	//     min = arr[i];
+	//    };
+	// const avg = sum / [...arr].length;
 	 max = Math.max(...arr);
 	 min = Math.min(...arr);
 	 sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
