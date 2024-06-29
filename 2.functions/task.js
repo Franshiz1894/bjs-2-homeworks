@@ -3,21 +3,23 @@ function getArrayParams(...arr) {
 	var max = -Infinity;
 	var sum = 0;
 	var avg = 0;
-	//for (var i = 0; i < arr.length; i++) {
-	//   sum += i;
-	//    if (arr[i] > max) {
-	//      max = arr[i];
-	//    };
-	//    else if (arr[i] < min) {
-	//     min = arr[i];
-	//    };
-	// const avg = sum / [...arr].length;
-	 max = Math.max(...arr);
-	 min = Math.min(...arr);
-	 sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
-	avg = sum / [...arr].length;
-	avg = avg.toFixed(2);
-	avg = Number(avg);
+	if (arr || arr.length) {
+		//for (var i = 0; i < arr.length; i++) {
+		//   sum += i;
+		//    if (arr[i] > max) {
+		//      max = arr[i];
+		//    };
+		//    else if (arr[i] < min) {
+		//     min = arr[i];
+		//    };
+		// const avg = sum / [...arr].length;
+		max = Math.max(...arr);
+		min = Math.min(...arr);
+		sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
+		avg = sum / [...arr].length;
+		avg = avg.toFixed(2);
+		avg = Number(avg);
+		};
 	return {
 		min: min,
 		max: max,
@@ -30,9 +32,9 @@ function summElementsWorker(...arr) {
 	var sum = 0;
 	if (arr || arr.length) {
 		sum = [...arr].reduce((total, currentValue) => total + currentValue, 0);
-		return {
-			sum: sum
-		};
+	};
+	return {
+		sum: sum
 	};
 };
 
@@ -43,10 +45,10 @@ function differenceMaxMinWorker(...arr) {
 	if (arr || arr.length) {
 		var max = Math.max(...arr);
 		var min = Math.min(...arr);
-		var dif = max - min;
-		return {
-			dif: dif
-		};
+		var dif = max - min;	
+	};
+	return {
+		dif: dif
 	};
 };
 
@@ -64,9 +66,9 @@ function differenceEvenOddWorker(...arr) {
 		};
 		dif = sumEvenElement - sumOddElement;
 		dif = Math.abs(dif);
-		return {
-			dif: dif
-		};
+	};
+	return {
+		dif: dif
 	};
 };
 
@@ -82,9 +84,9 @@ function averageEvenElementsWorker(...arr) {
 			};
 		};
 		avg = sumEvenElement / countEvenElement;
-		return {
-			avg: avg
-		};
+	};
+	return {
+		avg: avg
 	};
 };
 
@@ -101,8 +103,8 @@ function makeWork(arrOfArr, func) {
 				};
 			};
 		};
-		return {
-			maxWorkerResult: maxWorkerResult
-		};
+	};
+	return {
+		maxWorkerResult: maxWorkerResult
 	};
 };
