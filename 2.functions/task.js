@@ -65,7 +65,7 @@ function makeWork(arrOfArr, func) {
 			let max = func(...arrOfArr[i]);
 			if(max > maxWorkerResult){
 			  maxWorkerResult = max;
-			}
+			};
 		};
 	};
 	return maxWorkerResult;
