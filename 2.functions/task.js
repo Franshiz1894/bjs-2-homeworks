@@ -13,7 +13,7 @@ function getArrayParams(...arr) {
 		avg: avg
 	};
 
-};
+}; 		
 
 function summElementsWorker(...arr) {
 	return arr.reduce((total, currentValue) => total + currentValue, 0);
@@ -58,10 +58,6 @@ function averageEvenElementsWorker(...arr) {
 	return sumEvenElement / countEvenElement;
 };
 
-
-const arrOfArr = [[10, 10, 11, 20, 10], [67, 10, 2, 39, 88], [72, 75, 51, 87, 43], [30, 41, 55, 96, 62]];
-func = [summElementsWorker, differenceMaxMinWorker, differenceEvenOddWorker, averageEvenElementsWorker];
-
 function makeWork(arrOfArr, func) {
 	let maxWorkerResult = -Infinity;
 	func (arrOfArr){
@@ -70,7 +66,7 @@ function makeWork(arrOfArr, func) {
 			if(max > maxWorkerResult){
 			  maxWorkerResult = max;
 			}
+		};
 	};
-};
 	return maxWorkerResult;
 };
